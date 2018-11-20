@@ -51,7 +51,11 @@ class App extends Component {
       <div className="App">
         <CartHeader />
         <CartItems cartItemsList={this.state.cartItemsList} cartTotal={this.state.cartTotal} />
-        <AddItem products={this.state.products} addItemSubmit={this.addItemSubmit} />
+        <h1 id="add">Add Item</h1>
+        <div id="center">
+          <AddItem products={this.state.products} addItemSubmit={this.addItemSubmit} />
+        </div>
+
         <CartFooter copyright='2016' />
 
       </div>

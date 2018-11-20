@@ -17,16 +17,18 @@ class AddItem extends React.Component {
             <form onSubmit={this.onSubmit}>
                 <label>
                     Quantity
-            </label>
+                </label>
                 <input type='text' name='quantity' value={this.state.quantity} onChange={(ev) => this.setState({ quantity: ev.target.value })} />
                 <label>
                     Products
-            </label>
+                </label>
                 <select name='product_id' onChange={(ev) => this.setState({ product_id: ev.target.value })} >
                     {this.props.products.map((product, i) => <option key={product.id} value={product.id}>{product.name}</option>)}
                 </select>
-                <input type='submit' value='Submit' />
-            </form>
+                <div className="row">
+                    <input className="btn btn-primary" type='submit' value='Submit' />
+                </div>
+            </form >
         )
     }
 }
